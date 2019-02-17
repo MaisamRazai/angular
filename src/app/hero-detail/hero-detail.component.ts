@@ -36,6 +36,8 @@ export class HeroDetailComponent implements OnInit {
      });
      
   }
+  //commit
+  //commit2
   goBack():void {
     this.location.back();
   }
