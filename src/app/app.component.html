@@ -1,6 +1,19 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<main class="app-shell">
+  <header class="app-header">
+    <div class="branding">
+      <h1>{{ title }}</h1>
+      <p class="subtitle">Explore the Angular Tour of Heroes sample application.</p>
+    </div>
+
+    <nav class="app-nav">
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+    </nav>
+  </header>
+
+  <section class="app-content">
+    <router-outlet></router-outlet>
+  </section>
+
+  <app-messages></app-messages>
+</main>

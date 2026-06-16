@@ -1,8 +1,9 @@
-import { HeroService } from './../hero.service';
-import { Component, OnInit, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -10,33 +11,29 @@ import { Location } from '@angular/common';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  
-  hero: Hero ;
+  hero?: Hero;
 
-
-  constructor( 
+  constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
     private location: Location
-    ) { 
-      console.log("Hai I a hero-detail construtor");
+  ) { }
+
+  ngOnInit(): void {
+    this.getHero();
+  }
+
+  getHero(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if (!Number.isFinite(id)) {
+      return;
     }
 
-  ngOnInit() {
-    this.getHero();
-    console.log("Hai I a hero-detail ngOnInit");
+    this.heroService.getHero(id)
+      .subscribe(hero => this.hero = hero);
   }
-  // {id}
-  getHero(): void{
-     var theID = +this.route.snapshot.paramMap.get('id');
-     this.heroService.getHero(theID).subscribe(babaw => {
-      this.hero = babaw;
-      console.log("this is the rturned hero data" + babaw.name);
 
-     });
-     
-  }
-  goBack():void {
+  goBack(): void {
     this.location.back();
   }
 }

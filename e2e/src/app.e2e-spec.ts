@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the app title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angular-tour-of-heroes!');
+    expect(page.getTitleText()).toEqual('Tour of Heroes');
   });
 
   afterEach(async () => {

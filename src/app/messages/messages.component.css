@@ -1,43 +1,42 @@
-/* MessagesComponent's private CSS styles */
-
-h2 {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+.messages-panel {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(30, 136, 229, 0.12);
 }
 
-body {
-    margin: 2em;
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-body,
-input[text],
-button {
-    color: crimson;
-    font-family: Cambria, Georgia;
-}
-
-button.clear {
-    font-family: Arial;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-}
-
-button:hover {
-    background-color: #cfd8dc;
-}
-
-button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
+.messages-panel h2 {
+  margin: 0;
+  color: #1b3a59;
 }
 
 button.clear {
-    color: #888;
-    margin-bottom: 12px;
+  background: #f1f5f9;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.75rem;
+  color: #475569;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button.clear:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.message-item {
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+  line-height: 1.55;
 }

@@ -1,0 +1,59 @@
+.hero-detail {
+  max-width: 28rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.hero-detail h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.hero-info {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #536b7a;
+}
+
+.hero-label {
+  font-weight: 600;
+}
+
+.hero-field {
+  display: block;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #425264;
+}
+
+.hero-field input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cad3dc;
+  border-radius: 0.75rem;
+  background: #f9fbfd;
+}
+
+.hero-actions {
+  margin-top: 1.25rem;
+}
+
+button {
+  background: #1e88e5;
+  border: none;
+  color: #fff;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1565c0;
+}

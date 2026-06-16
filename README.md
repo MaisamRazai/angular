@@ -1,27 +1,65 @@
-# AngularTourOfHeroes
+# Tour of Heroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+A polished Angular sample application that demonstrates core Angular concepts including components, routing, services, and dependency injection.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Modular Angular components with isolated styles
+- Client-side routing using `@angular/router`
+- Reusable data service for hero management
+- Message logging panel for application events
+- Responsive layout and modern UI styling
 
-## Code scaffolding
+## Getting started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+- Node.js 8.x or later
+- npm 5.x or later
+- Angular CLI compatible with Angular 7
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Install dependencies
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Run the development server
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Open `http://localhost:4200/` in your browser.
 
-## Further help
+### Build for production
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+npm run build -- --prod
+```
+
+### Run unit tests
+
+```bash
+npm test
+```
+
+### Run lint
+
+```bash
+npm run lint
+```
+
+## Project structure
+
+- `src/app/` — application source code
+- `src/app/dashboard/` — dashboard feature
+- `src/app/hero-detail/` — hero detail feature
+- `src/app/heroes/` — hero list feature
+- `src/app/messages/` — application messages
+- `src/app/app-routing.module.ts` — route definitions
+- `src/styles.css` — shared global styles
+
+## Notes
+
+This repository is based on the Angular Tour of Heroes example and has been refined with cleaner structure, improved styling, and better naming conventions.

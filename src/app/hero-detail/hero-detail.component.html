@@ -1,11 +1,17 @@
-<div *ngIf="hero">
+<section *ngIf="hero" class="hero-detail">
+  <h2>{{ hero.name | uppercase }} Details</h2>
 
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-        <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-    </div>
-    <button (click)="goBack()">go back</button>
-</div>
+  <div class="hero-info">
+    <span class="hero-label">ID:</span>
+    <span>{{ hero.id }}</span>
+  </div>
+
+  <label class="hero-field">
+    Name
+    <input [(ngModel)]="hero.name" placeholder="Enter hero name" />
+  </label>
+
+  <div class="hero-actions">
+    <button type="button" (click)="goBack()">Go back</button>
+  </div>
+</section>

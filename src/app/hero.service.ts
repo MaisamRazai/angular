@@ -10,15 +10,17 @@ import { MessageService } from './message.service';
   providedIn: 'root',
 })
 export class HeroService {
-
   constructor(private messageService: MessageService) { }
-  getHero(id: number): Observable<Hero> {
-    this.messageService.add('HeroService: fetched hero id=${id}');
-    return of(HEROES.find(hero => hero.id === id));
+
+  getHero(id: number): Observable<Hero | undefined> {
+    const hero = HEROES.find(currentHero => currentHero.id === id);
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
   }
+
   getHeroes(): Observable<Hero[]> {
-    // TODO: send the message _after_ fetching the heroes
+    const heroes = HEROES;
     this.messageService.add('HeroService: fetched heroes');
-    return of(HEROES);
+    return of(heroes);
   }
 }
